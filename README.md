@@ -65,4 +65,4 @@ Some sample tests are already included using `pytest`.
 To run the application outside Nuke, you must install the package dependencies. You can do so with the `pyproject.toml` by using `poetry` or the `requirements.txt` by using `pip`.
 
 You can the run the application with the vscode `Run Local Application` task or
-`poetry run python -m src.run_local`.
+`poetry run python -m src.local.local_app`.

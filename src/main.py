@@ -18,7 +18,7 @@ from .utils import color_widget
 from .widgets import ErrorDialog, ToolBar
 from . import nuke
 
-LOGGER = logging.getLogger('projectname.main')
+LOGGER = logging.getLogger('__projectName__.main')
 LOGGER.debug('-*- START APPLICATION -*-')
 
 
@@ -92,7 +92,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         """Init method for main window widget."""
         QMainWindow.__init__(self)
-        self.setWindowTitle("projectname")
+        self.setWindowTitle("__projectName__")
 
         toolbar = ToolBar()
         self.addToolBar(toolbar)
@@ -115,5 +115,5 @@ except ImportError as error:
     pass
 else:
     nukescripts.panels.registerWidgetAsPanel(
-        'projectname.src.main.MainWindow', 'projectname',
-        'projectname.MainWindow')
+        '__projectName__.src.main.MainWindow', '__projectName__',
+        '__projectName__.MainWindow')

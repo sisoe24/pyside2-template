@@ -23,8 +23,8 @@ addopts = "-x -l --tb=short --strict-markers --cov=src"
 qt_api = "pyside2"
 
 [tool.poetry.dependencies]
-python = ">=3.6, <=3.7.7"
-PySide2 = "5.12.2"
+python = "__projectPython__"
+PySide2 = "__projectPyside__"
 
 [tool.poetry.dev-dependencies]
 pytest = "*"

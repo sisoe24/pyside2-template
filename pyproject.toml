@@ -4,6 +4,24 @@ version = "0.1.0"
 description = "projectDescription}}"
 authors = ["author <author@email.com>"]
 
+[tool.coverage.run]
+omit = ["tests/*"]
+
+[tool.coverage.report]
+skip_covered = true
+skip_empty = true
+
+[tool.coverage.paths]
+source = ["src/*"]
+
+[tool.coverage.html]
+directory = "coverage"
+
+[tool.pytest.ini_options]
+testpaths = "tests"
+addopts = "-x -l --tb=short --strict-markers --cov=src"
+qt_api = "pyside2"
+
 [tool.poetry.dependencies]
 python = ">=3.6, <=3.7.7"
 PySide2 = "5.12.2"

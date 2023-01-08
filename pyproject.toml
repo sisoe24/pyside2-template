@@ -24,7 +24,7 @@ qt_api = "pyside2"
 
 [tool.poetry.dependencies]
 python = "__projectPython__"
-PySide2 = "__projectPyside__"
+PySide2 = "__projectPySide__"
 
 [tool.poetry.dev-dependencies]
 pytest = "*"

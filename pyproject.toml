@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "projectSlug"
+name = "__projectSlug__"
 version = "0.1.0"
-description = "projectDescription}}"
+description = "__projectDescription__}}"
 authors = ["author <author@email.com>"]
 
 [tool.poetry.dependencies]
-python = ">=3.6, <=3.7.7"
-PySide2 = "5.12.2"
+python = "__projectPython__"
+PySide2 = "__projectPySide__"
 
 [tool.poetry.dev-dependencies]
 pytest = "*"

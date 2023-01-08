@@ -16,8 +16,6 @@ pytest.ini          export-ignore
 .coverage*          export-ignore
 coverage*           export-ignore
 
-CHANGELOG.md        export-ignore
-
 
 # Directories
 .github             export-ignore

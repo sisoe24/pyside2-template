@@ -20,7 +20,6 @@ coverage*           export-ignore
 # Directories
 .github             export-ignore
 .githooks           export-ignore
-.vscode             export-ignore
 tests               export-ignore
 
 # Source files

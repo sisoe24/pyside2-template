@@ -18,7 +18,7 @@ from .utils import color_widget
 from .widgets import ErrorDialog, ToolBar
 from . import nuke
 
-LOGGER = logging.getLogger('__projectName__.main')
+LOGGER = logging.getLogger('__projectSlug__.main')
 LOGGER.debug('-*- START APPLICATION -*-')
 
 
@@ -115,5 +115,5 @@ except ImportError as error:
     pass
 else:
     nukescripts.panels.registerWidgetAsPanel(
-        '__projectName__.src.main.MainWindow', '__projectName__',
-        '__projectName__.MainWindow')
+        '__projectSlug__.src.main.MainWindow', '__projectSlug__',
+        '__projectSlug__.MainWindow')

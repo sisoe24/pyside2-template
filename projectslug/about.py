@@ -1,5 +1,6 @@
 """Generate about information for the user or bug reports."""
 from __future__ import annotations
+import os
 
 import re
 import pathlib
@@ -9,7 +10,7 @@ from PySide2 import __version__ as PySide2_Version
 from PySide2.QtCore import QSysInfo
 
 ROOT = pathlib.Path(__file__).parent.parent
-
+USER = os.getenv('USERNAME', os.getenv('USER', 'unknown'))
 
 def _get_git_branch():
     """Get git branch name if any."""
@@ -45,7 +46,8 @@ def about():
     Returns:
         (tuple): a tuple containing tuple(str, str) with about information
     """
-    web = 'https://github.com/username/projectslug'
+    # FIXME: Replace with your github username
+    web = f'https://github.com/{USER}/projectslug'
     name, version = _parse_pyproject().values()
 
     data = {

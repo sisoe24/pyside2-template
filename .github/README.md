@@ -33,7 +33,12 @@ You can use the template in two ways:
 ### Manual
 
 1. Clone the repository.
-2. Run the script `template.py` and follow the instructions.
+2. Run the script `template.py` and supply the necessary information.
+
+  ```bash
+  python template.py -h
+  python template.py "MyPlugin" "/path/to/nuke/plugin"
+  ```
 
 You can now run Nuke and find the plugin inside Window -> Custom. Alternately you can run the plugin in [local mode](#run-standalone).
 

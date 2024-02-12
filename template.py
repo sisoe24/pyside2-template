@@ -12,7 +12,7 @@ def convert_placeholders(path: str, project_name: str):
         for file in files:
             file_path = os.path.join(root, file)
 
-            with open(file_path, 'r') as file:
+            with open(file_path, 'r', encoding='utf-8') as file:
                 content = file.read()
 
             content = content.replace('projectslug', project_name)
@@ -47,7 +47,8 @@ if __name__ == '__main__':
     shutil.copytree(
         os.path.dirname(os.path.abspath(__file__)), out,
         ignore=shutil.ignore_patterns(
-            ARGS.path, '__pycache__', '.git', '.venv', 'template.py'
+            ARGS.path, '__pycache__', '.git', '.venv', '*.pyc', 'template.py', 
+            '*.lock'
         )
     )
     convert_placeholders(out, ARGS.name)

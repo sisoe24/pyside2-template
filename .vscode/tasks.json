@@ -6,7 +6,7 @@
         {
             "label": "Run Local Application",
             "type": "shell",
-            "command": "${workspaceFolder}/.venv/bin/python -m run_app.main",
+            "command": "${workspaceFolder}/.venv/bin/python run_app.py",
             "options": {
                 "env": {
                     "PYTHONDONTWRITEBYTECODE": "1",

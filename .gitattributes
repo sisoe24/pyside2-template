@@ -8,14 +8,10 @@
 
 *.lock              export-ignore
 
-Pipfile             export-ignore
 requirements.txt    export-ignore
-
-pytest.ini          export-ignore
 
 .coverage*          export-ignore
 coverage*           export-ignore
-
 
 # Directories
 .github             export-ignore

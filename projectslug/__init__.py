@@ -4,6 +4,6 @@ try:
     import nuke
     import nukescripts
 except ImportError:
-    from src.local import local_nuke as nuke
+    from projectslug.mock import nuke
 else:
     from . import main

@@ -1,4 +1,4 @@
-# __projectSlug__ README
+# projectslug README
 
 ## Features
 

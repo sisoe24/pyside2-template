@@ -4,9 +4,7 @@ A Python PySide2 plugin template for Nuke.
 
 ## Description
 
-This project is a template to create a basic plugin in Nuke with PySide2.
-
-> To use this template, you need to use the Visual Studio Code extension [NukeTools](https://marketplace.visualstudio.com/items?itemName=virgilsisoe.nuke-tools).
+A basic template to create a basic plugin in Nuke with PySide2 with Python 3.7+.
 
 ## Features
 
@@ -46,7 +44,15 @@ You can now run Nuke and find the plugin inside Window -> Custom. Alternately yo
 
 To run the application outside Nuke, you must install the package dependencies. You can do so with the `pyproject.toml` by using `poetry` or the `requirements.txt` by using `pip`.
 
-You can run the application in one of the following ways:
+If you are using `poetry` you can run the following commands:
 
-* `poetry run app`
-* `poetry run python -m run_app.main` 
+```bash
+poetry install
+poetry run app
+# or
+poetry run python -m run_app.main
+```
+
+## Notes
+
+- From version `0.2.0` the template is not compatible with Python 2.7 anymore.

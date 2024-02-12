@@ -1,1 +1,1 @@
-pyside2==__projectPySide__
+pyside2==5.15.2

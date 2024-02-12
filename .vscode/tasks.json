@@ -6,7 +6,7 @@
         {
             "label": "Run Local Application",
             "type": "shell",
-            "command": "${workspaceFolder}/.venv/bin/python -m src.local.local_app",
+            "command": "${workspaceFolder}/.venv/bin/python -m run_app.main",
             "options": {
                 "env": {
                     "PYTHONDONTWRITEBYTECODE": "1",
@@ -16,33 +16,17 @@
         {
             "label": "Clean .pyc",
             "type": "shell",
-            "command": "find ${workspaceFolder} -type f -name '*.pyc' -exec rm {} \\;",
-            "problemMatcher": []
-        },
-        {
-            "label": "Toggle Widgets Color",
-            "type": "shell",
-            "command": "echo ${input:toggleColor} > ${workspaceFolder}/src/utils/.tmp/widgets_color_state",
+            "windows": {
+                "command": "del /s /q ${workspaceFolder}\\*.pyc",
+            },
+            "linux": {
+                "command": "find ${workspaceFolder} -type f -name '*.pyc' -exec rm {} \\;",
+            },
+            "osx": {
+                "command": "find ${workspaceFolder} -type f -name '*.pyc' -exec rm {} \\;",
+            },
             "problemMatcher": [],
-            "presentation": {
-                "echo": false,
-                "reveal": "silent",
-                "focus": false,
-                "panel": "shared",
-                "showReuseMessage": true,
-                "clear": false
-            }
-        }
-    ],
-    "inputs": [
-        {
-            "id": "toggleColor",
-            "type": "pickString",
-            "description": "Toggle Widgets Color",
-            "options": [
-                "True",
-                "False"
-            ]
-        }
+            "detail": "Remove all .pyc files in the workspace. Unix only."
+        },
     ]
 }

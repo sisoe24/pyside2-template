@@ -1,4 +1,4 @@
-# __projectSlug__ CHANGELOG
+# projectslug CHANGELOG
 
 ## [Unreleased]
 

@@ -1,11 +1,8 @@
 from __future__ import annotations
 
 import logging
-from random import randint
-from typing import Optional
 
 from PySide2.QtCore import Qt, Slot
-from PySide2.QtGui import QColor, QPalette
 from PySide2.QtWidgets import (QHeaderView, QLabel, QMainWindow, QPushButton,
                                QTableWidget, QTableWidgetItem, QVBoxLayout,
                                QWidget)
@@ -92,23 +89,6 @@ class MainWindow(QMainWindow):
             LOGGER.critical(err, exc_info=True)
         else:
             self.setCentralWidget(main_widgets)
-
-    def _debug_colors(self, widget: Optional[QWidget] = None):
-        """Set random colors to all widgets for debugging purposes."""
-        widget = widget or self
-        for child in widget.children():
-
-            if not isinstance(child, QWidget):
-                continue
-
-            child.setAutoFillBackground(True)
-            palette = QPalette()
-            palette.setColor(
-                QPalette.Window,
-                QColor(randint(0, 255), randint(0, 255), randint(0, 255)),
-            )
-            child.setPalette(palette)
-            self._debug_colors(child)
 
 
 try:

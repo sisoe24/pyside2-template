@@ -4,9 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Run Local Application",
+            "label": "Run Local",
             "type": "shell",
-            "command": "${workspaceFolder}/.venv/bin/python run_app.py",
+            "command": "poetry run local",
             "options": {
                 "env": {
                     "PYTHONDONTWRITEBYTECODE": "1",

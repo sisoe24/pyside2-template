@@ -57,17 +57,18 @@ def main():
         sys.exit(1)
 
     package_name = input('Enter package name: ')
+    package_name = package_name.lower().replace(' ', '_')
+
+    if input('Replace placeholders with package name? (y/n): ') != 'y':
+        sys.exit(0)
+
+    convert_placeholders(ROOT, package_name)
 
     if input('Initialize poetry? (y/n): ') == 'y':
         subprocess.run(['poetry', 'install'], cwd=ROOT)
 
     if input('Initialize pre-commit? (y/n): ') == 'y':
         subprocess.run(['pre-commit', 'install'], cwd=ROOT)
-
-    if input('Replace placeholders with package name? (y/n): ') != 'y':
-        sys.exit(0)
-
-    convert_placeholders(ROOT, package_name)
 
 
 if __name__ == '__main__':

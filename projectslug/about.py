@@ -24,21 +24,14 @@ def _get_git_branch():
 
 def _parse_pyproject():
     """Get package name and version from pyproject.toml."""
-    try:
-        with (ROOT / 'pyproject.toml').open() as file:
-            content = file.read()
-            name = re.search(r'(?<=name = ")[^"]+', content).group()
-            version = re.search(r'(?<=version = ")[^"]+', content).group()
-            return {
-                'name': name,
-                'version': version,
-            }
-    except FileNotFoundError:
+    with (ROOT / 'pyproject.toml').open() as file:
+        content = file.read()
+        name = re.search(r'(?<=name = ")[^"]+', content).group()
+        version = re.search(r'(?<=version = ")[^"]+', content).group()
         return {
-            'name': 'unknown',
-            'version': 'unknown',
+            'name': name,
+            'version': version,
         }
-
 
 def about():
     """Generate about information with various app versions.
@@ -46,7 +39,7 @@ def about():
     Returns:
         (tuple): a tuple containing tuple(str, str) with about information
     """
-    # FIXME: Replace with your github username
+    # FIXME: Replace with your github link
     web = f'https://github.com/{USER}/projectslug'
     name, version = _parse_pyproject().values()
 

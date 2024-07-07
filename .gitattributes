@@ -17,6 +17,7 @@ coverage*           export-ignore
 .githooks           export-ignore
 .vscode             export-ignore
 tests               export-ignore
+scripts             export-ignore
 
 # Source files
 *                   text=auto

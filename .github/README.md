@@ -4,12 +4,12 @@ A Python PySide2 plugin template for Nuke.
 
 ## Description
 
-A basic template to create a basic plugin in Nuke with PySide2 with Python 3.7+.
+A basic template to create a basic plugin in Nuke with PySide2 with Python 3+.
 
 ## Features
 
 - A ready-to-use QMainWindow with a QToolbar.
-  - The toolbar offers an "About" widget with information about the application.
+  - "About" widget with information about the application.
 - A custom QMessageBox for errors and bug reports.
 - A startup logging module.
 - The ability to launch the plugin as a standalone application, (outside Nuke).
@@ -17,7 +17,7 @@ A basic template to create a basic plugin in Nuke with PySide2 with Python 3.7+.
 If using Visual Studio Code the following tasks will be available
 
 - `Clean .pyc`: clean .pyc files.
-- `Run Local Application`: Run application locally.
+- `Run Local`: Run application locally.
 
 ## Usage
 
@@ -26,17 +26,17 @@ You can use the template in two ways:
 ### Visual Studio Code
 
 1. Install [NukeTools](https://marketplace.visualstudio.com/items?itemName=virgilsisoe.nuke-tools) for Visual Studio Code.
-2. Launch the command `Nuke: Create PySide template`
+2. Launch the command `Nuke: Add Packages -> pysideTemplate`.
 
 ### Manual
 
-1. Clone the repository.
-2. Run the script `template.py` and supply the necessary information.
+1. Use as a template from this repository.
+2. Run the script `scripts/substitute_placeholders.py` and supply the necessary information.
 
   ```bash
-  python template.py -h
-  python template.py "MyPlugin" "/path/to/nuke/plugin"
+  python scripts/substitute_placeholders.py --init
   ```
+3. Import the plugin into your menu.py file.
 
 You can now run Nuke and find the plugin inside Window -> Custom. Alternately you can run the plugin in [local mode](#run-standalone).
 
@@ -48,9 +48,7 @@ If you are using `poetry` you can run the following commands:
 
 ```bash
 poetry install
-poetry run app
-# or
-poetry run python -m run_app.main
+poetry run local
 ```
 
 ## Notes

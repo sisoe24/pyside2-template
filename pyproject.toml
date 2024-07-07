@@ -1,11 +1,20 @@
 [tool.poetry]
 name = "projectslug"
-version = "0.2.0"
+version = "0.1.0"
 description = "FIXME: Add a description"
 authors = ["FIXME: Add your name"]
 
 [tool.poetry.scripts]
-app = "run_app:main"
+local = "projectslug.local_app:main"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+pytest-qt = "*"
+pytest-cov = "*"
+pytest-repeat = "*"
+pytest-randomly = "*"
+requests = "*"
+pre-commit = "^3.7.1"
 
 [tool.coverage.run]
 omit = ["tests/*"]
@@ -30,12 +39,6 @@ python = "~3.9"
 PySide2 = "~5.15"
 
 [tool.poetry.dev-dependencies]
-pytest = "*"
-pytest-qt = "*"
-pytest-cov = "*"
-pytest-repeat = "*"
-pytest-randomly = "*"
-requests = "*"
 
 [build-system]
 requires = ["poetry-core>=1.2.0"]

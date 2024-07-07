@@ -9,6 +9,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# comment this if you want to check in the lock file
+poetry.lock
+
 # C extensions
 *.so
 

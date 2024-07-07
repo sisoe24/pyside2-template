@@ -1,4 +1,4 @@
-# projectslug CHANGELOG
+# CHANGELOG
 
 ## [Unreleased]
 

@@ -11,7 +11,7 @@ from .main import MainWindow
 def main():
     app = QApplication(sys.argv)
     window = MainWindow()
-    window.setWindowTitle('projectslug Local')
+    window.setWindowTitle(__name__)
     # window.setGeometry(10, 10, 500, 500)
     window.show()
     app.exec_()
